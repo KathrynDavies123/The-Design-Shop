@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap");
-/* div around a tag background-color:#f7f7f7 for transition to opacity*/
+
 
 * {
   padding: 0;
@@ -10,6 +10,22 @@
 html {
   font-family: "Karla", sans-serif;
   color: #323a45;
+}
+
+/* ===============GENERAL=============== */
+
+h2 {
+  font-size: 15px;
+}
+
+span {
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 700;
+    color: #323a45;
 }
 
 /* ===============HEADER/NAV=============== */
@@ -39,25 +55,82 @@ ul {
 
 img {
   max-width: 100%;
-  max-height: 100%;
+  /* max-height: 100%;
+  object-fit: contain; */
 }
 
 /* ===============PRODUCTS SECTION=============== */
 
 main {
-  background-color: blueviolet;
+  /* background-color: blueviolet; */
   padding: 0 5% 0 5%;
+  /* gap:1%;   with gap 1% my footer was overlapping the body content, no idea why */
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
 }
 
 .bigimage {
-  background-color: aqua;
+  /* background-color: aqua; */
   grid-column: 1 / -1;
-  text-align: center;
+  width: 90%;
+  margin: 0 auto;
 }
 
-.smallimage {
-  background-color: blue;
+main p {
+  color: #848484;
+  font-size: 15px;
 }
+
+main div div {
+  display: flex;
+  justify-content: space-between;
+}
+
+main div {
+    background-color: #f7f7f7;
+}
+
+main div:hover img{
+    opacity:0.5;
+}
+
+main div img {
+    transition: all 0.5s;
+}
+
+/* ===============FOOTER=============== */
+
+
+
+.mainfooter, .copyright {
+    display:flex;
+    margin-top: 5%;
+}
+
+.mainfooter {
+    justify-content: space-around;
+    font-size:15px;
+}
+
+.copyright {
+    margin-left:5%;
+}
+
+.copyright p {
+    padding: 0 1% 1% 0;
+}
+
+.mainfooter div {
+    display:flex;
+    flex-direction: column;
+}
+
+.designshop {
+    width:20%;
+}
+
+.newsletter p:nth-of-type(2) {
+   font-style: italic;
+}
+
